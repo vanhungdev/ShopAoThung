@@ -1,8 +1,63 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_layoutSite.cshtml";
 }
 
-<h2>trang chủ nè</h2>
+<!-- header -->
+@Html.Action("_header", "Modules")
+<!-- banner -->
+@Html.Action("_mainmenu", "Modules")
+<!-- //banner-top -->
+@Html.Action("_slider", "Modules")
 
+<!-- banner -->
+<!-- //banner -->
+<!-- schedule-bottom -->
+<!-- //schedule-bottom -->
+<!-- banner-bootom-w3-agileits -->
+<!--/grids-->
+<!-- /new_arrivals -->
+<div class="new_arrivals_agile_w3ls_info">
+    <div class="container">
+        <h3 class="wthree_text_info"><span>Sản phẩm </span>Mới</h3>
+        <div id="horizontalTab">
+            <ul class="resp-tabs-list">
+                <li> Đồ Nam</li>
+                <li> Đồ Nữ</li>
+                <li> Phụ Kiện</li>
+            </ul>
+            <div class="resp-tabs-container">
+                <!--/tab_one-->
+                <div class="tab1">
+                    <!--/load len do nam-->
+                  @Html.Action("_aoThungNam","Product")
+                    <div class="clearfix"></div>
+                </div>
+                <!--//tab_one-->
+                <!--/tab_two-->
+                <div class="tab2">
+                    <!--/load len do nu-->
+
+
+                    @*@Html.Action("_aoThungNu", "Product");*@
+                   
+                </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!--//tab_two-->
+            <div class="tab3">
+                <!--/load len phu kien-->
+
+
+                @*@Html.Action("_phuKien", "Product");*@
+             
+            </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //new_arrivals -->
+<!-- footer -->
+@Html.Action("_footer", "Modules")

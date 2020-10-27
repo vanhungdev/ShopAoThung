@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ShopAoThung.Models.Product>
+@foreach (var item in Model)
+{
+    <div class="col-md-3 product-men">
+        <div class="men-pro-item simpleCart_shelfItem">
+            <div class="men-thumb-item">
+                <img src="~/public/images/product/@item.img" alt="" class="pro-image-front">
+                <img src="~/public/images/product/@item.img" alt="" class="pro-image-back">
+                <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                        <a href="single.html" class="link-product-add-cart">Xem Thêm</a>
+                    </div>
+                </div>
+                <span class="product-new-top">New</span>
+
+            </div>
+            <div class="item-info-product ">
+                <h4><a href="single.html">@item.name</a></h4>
+                <div class="info-product-price">
+                    <span class="item_price">@item.price</span>
+                    <del>@item.price</del>
+                </div>
+                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                    <form action="#" method="post">
+                        <fieldset>
+                            <input type="hidden" name="cmd" value="_cart" />
+                            <input type="hidden" name="add" value="1" />
+                            <input type="hidden" name="business" value=" " />
+                            <input type="hidden" name="item_name" value=" Cặp Laptop" />
+                            <input type="hidden" name="amount" value="300000" />
+                            <input type="hidden" name="discount_amount" value="20000" />
+                            <input type="hidden" name="currency_code" value="VND" />
+                            <input type="hidden" name="return" value=" " />
+                            <input type="hidden" name="cancel_return" value=" " />
+                            <input type="submit" name="submit" value="Thêm vào giỏ" class="button" />
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}

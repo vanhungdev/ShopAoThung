@@ -1,0 +1,206 @@
+.justify-content-between {
+    -webkit-box-pack: justify !important;
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+}
+
+.check_w3ls h4 {
+    font-size: 1.2em;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+table.timetable_sub {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.timetable_sub thead {
+    background: #004284;
+}
+
+.timetable_sub th,
+.timetable_sub td {
+    text-align: center;
+    padding: 7px;
+    font-size: 14px;
+    color: #212121;
+}
+
+.timetable_sub th {
+    background: #212121;
+    color: #fff !important;
+    text-transform: capitalize;
+    font-size: 13px;
+    border-right: 1px solid #ded2d2;
+}
+
+.timetable_sub td {
+    border: 1px solid #CDCDCD;
+}
+
+.timetable_sub th,
+.timetable_sub td {
+    text-align: center;
+    padding: 7px;
+    font-size: 14px;
+    color: #212121;
+}
+
+.timetable_sub th,
+.timetable_sub td {
+    text-align: center;
+    padding: 7px;
+    font-size: 14px;
+    color: #212121;
+}
+
+.checkout-left-basket h4 {
+    padding: 1em;
+    background: #eee;
+    font-size: 1em;
+    color: #000;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 2em;
+}
+
+.check_w3ls h4 {
+    font-size: 1.2em;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.checkout-left-basket ul li {
+    list-style-type: none;
+    margin-bottom: 1em;
+    font-size: 14px;
+    color: #999;
+}
+
+.address_form {
+    float: right;
+}
+
+.checkout-right h4,
+.address_form h4 {
+    font-size: 1.5em;
+    margin: 0 0 1em 0;
+    letter-spacing: 1px;
+    color: #0076BE;
+}
+
+.creditly-wrapper {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    font-size: 14px;
+    color: white;
+}
+
+.creditly-wrapper .form-group {
+    width: 100%;
+    display: table;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.creditly-wrapper label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #212121;
+    font-size: 1.1em;
+}
+
+.pay_info input[type="email"],
+.pay_info input[type="password"],
+.creditly-wrapper .form-control {
+    display: block;
+    width: 95.5%;
+    padding: 8px 10px;
+    height: auto;
+    font-size: 14px;
+    color: #212121;
+    background: #eee;
+    border: 1px solid #e7e7e7;
+    margin-bottom: 25px;
+    outline: none;
+}
+
+button.submit.check_out {
+    outline: none;
+    padding: 10px 28px;
+    background: #0076BE;
+    font-size: 1.1em;
+    border-radius: 7px;
+    font-weight: 400;
+    color: #fff;
+    border: none;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.creditly-card-form .submit {
+    outline: none;
+    overflow: hidden;
+    display: inline-block;
+    visibility: visible!important;
+    -webkit-font-smoothing: antialiased;
+    border: none;
+    padding: 1px;
+    text-decoration: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.mt-5,
+.my-5 {
+    margin-top: 3rem !important;
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.address_form {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+}
+
+.mb-4,
+.my-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.checkout_wthree {
+    padding-top: 3rem !important;
+}
+
+.d-sm-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+td.invert-image a img {
+    width: 30%;
+    margin: 0 auto;
+}
