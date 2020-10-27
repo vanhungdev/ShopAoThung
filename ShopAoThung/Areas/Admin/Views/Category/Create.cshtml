@@ -1,0 +1,112 @@
+﻿@model ShopAoThung.Models.Mcategory
+
+@{
+    ViewBag.Title = "Create category";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+
+}
+
+@{
+    List<SelectListItem> listcat = new List<SelectListItem>();
+    List<SelectListItem> listorder = new List<SelectListItem>();
+    List<SelectListItem> status = new List<SelectListItem>();
+    SelectListItem statusitem1 = new SelectListItem() { Value = "1", Text = "Xuẩt Bản" };
+    SelectListItem statusitem2 = new SelectListItem() { Value = "2", Text = "Chưa Xuất bản" };
+    status.Add(statusitem1);
+    status.Add(statusitem2);
+
+
+    SelectListItem listorderitem;
+    SelectListItem listcatitem;
+
+    listcatitem = new SelectListItem() { Value = "1", Text = "Cấp Cha" };
+    listcat.Add(listcatitem);
+    foreach (var item in ViewBag.listCate)
+    {
+        listorderitem = new SelectListItem() { Value = item.orders + "", Text = "Sau [" + item.name + "]" };
+        listorder.Add(listorderitem);
+
+        listcatitem = new SelectListItem() { Value = item.ID + "", Text = "Con của [" + item.name + "]" };
+        listcat.Add(listcatitem);
+    }
+
+}
+<!-- Content Wrapper. Contains page content -->
+<div class="card card-title bg-white p-1">
+    <div class="row">
+        <div class="col-md-6 "> <h5 class="pl-2 mt-2 text-blues">Thêm loại sản phẩm</h5> </div>
+        <div class="col-md-6 m-0">
+            <ol class="breadcrumb bg-white float-sm-right m-0">
+                <li class="breadcrumb-item m-0"><a href="~/Admin">Home</a></li>
+                <li class="breadcrumb-item active m-0">Quản lý loại sản phẩm</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+
+
+<section class=" pt-2 card  ">
+    @Html.Partial("_MessgeAlert")
+    <div class="bg-white p-4 ">
+
+
+        @using (Html.BeginForm("Create", "Category"))
+        {
+            @Html.AntiForgeryToken()
+            <div class=" row ">
+                <div class="col-md-4">  <h3 class=" font-weight-bold text-danger "> THÊM LOẠI SẢN PHẨM</h3>  </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4 ">
+                    <div class="float-right">
+                        <button class="btn btn-sm bg-success text-white"><i class="far fa-save"></i> Lưu</button>
+                        <a href="~/admin/category" class="btn btn-sm bg-danger text-white"><i class="far fa-window-close"></i> Hủy</a>
+                    </div>
+                </div>
+            </div>
+            <div class=" row ">
+                <div class="col-md-8">
+                    <div>
+                        <label for="psw"><span class="text-secondary ">Tên Loại Sản Phẩm</span></label>
+                        @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                    </div>
+                    <div>
+                        <label for="psw"><span class="text-secondary ">Từ khóa SEO</span></label>
+                        @Html.EditorFor(model => model.metakey, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.metakey, "", new { @class = "text-danger" })
+                    </div>
+                    <div>
+                        <label for="psw"><span class="text-secondary ">Mô ta SEO</span></label>
+                        @Html.EditorFor(model => model.metadesc, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.metadesc, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="psw"><span class="text-secondary ">Chọn Cấp cha</span></label>
+                    <div>
+                        @Html.DropDownListFor(model => model.parentid, listcat, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.parentid, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div>
+                        <label for="psw"><span class="text-secondary ">Chọn vị trí hiển thị</span></label>
+                        @Html.DropDownListFor(model => model.orders, listorder, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.orders, "", new { @class = "text-danger" })
+                    </div>
+                    <div>
+                        <label for="psw"><span class="text-secondary ">Trang Thái</span></label>
+                        @Html.DropDownListFor(model => model.status, status, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.status, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+            </div>
+        }
+    </div>
+</section>
+<script>
+    $("#category").addClass("active");
+</script>
+
